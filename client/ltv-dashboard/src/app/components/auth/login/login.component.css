@@ -1,0 +1,10 @@
+a {
+    cursor: pointer;  /* Ensures the pointer cursor appears */
+    text-decoration: none;  /* Removes default underline if needed */
+  }
+  
+  a:hover {
+    text-decoration: underline;  /* Optional: Adds underline on hover */
+    color: blue;  /* Optional: Changes color on hover */
+  }
+  

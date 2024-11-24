@@ -1,0 +1,54 @@
+<div class="card">
+    <app-filter (statusChanged)="onFilterStatus($event)"></app-filter>
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead>
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Id
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Phone Number
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Status
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Message Count
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                <tr *ngFor="let number of filteredPhoneNumbers">
+                    <td class="px-6 py-4 text-xl whitespace-nowrap">{{ number.id }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">{{ number.number }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span [class]="number.status === 'active' ? 'text-green-600' : 'text-red-600'">
+                            {{ number.status }}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">{{ number.messages }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <app-action-buttons [phone]="number"
+                            (toggleStatus)="onToggleStatus(number)"></app-action-buttons>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="flex justify-between mt-4">
+        <button class="px-4 py-2 bg-blue-500 text-white rounded-md" (click)="onPrevPage()"
+            [disabled]="!pagination.hasPrevPage">Previous</button>
+        <button class="px-4 py-2 bg-blue-500 text-white rounded-md" (click)="onNextPage()"
+            [disabled]="!pagination.hasNextPage">Next</button>
+    </div>
+</div>
+
+

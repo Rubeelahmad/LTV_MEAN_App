@@ -1,0 +1,30 @@
+a {
+    cursor: pointer;  /* Ensures the pointer cursor appears */
+    text-decoration: none;  /* Removes default underline if needed */
+  }
+  
+  a:hover {
+    text-decoration: underline;  /* Optional: Adds underline on hover */
+    color: blue;  /* Optional: Changes color on hover */
+  }
+  
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  input {
+    border-radius: 8px;
+  }
+  
+  /* Button enhancements */
+  button {
+    border-radius: 8px;
+  }
+  
+  /* Link styling */
+  a {
+    font-size: 0.875rem;
+  }
+  

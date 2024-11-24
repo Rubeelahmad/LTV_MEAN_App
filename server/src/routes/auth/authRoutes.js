@@ -6,7 +6,6 @@ const validate = require("../../middleware/validate");
 
 const router = express.Router();
 
-// Validation rules
 const registerValidation = [
   body("username")
     .trim()
@@ -31,7 +30,6 @@ const loginValidation = [
   body("password").exists().withMessage("Password is required"),
 ];
 
-// Register endpoint
 router.post("/register", registerValidation, validate, async (req, res) => {
   try {
     const { username, email, phone, password } = req.body;
@@ -46,7 +44,6 @@ router.post("/register", registerValidation, validate, async (req, res) => {
       });
     }
 
-    // Create new user
     const user = new User({
       username,
       email,
@@ -69,7 +66,6 @@ router.post("/register", registerValidation, validate, async (req, res) => {
   }
 });
 
-// Login endpoint
 router.post("/login", loginValidation, validate, async (req, res) => {
   try {
     const { email, password } = req.body;

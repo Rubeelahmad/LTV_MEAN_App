@@ -11,7 +11,7 @@ import {
 } from 'rxjs';
 
 import { PhoneNumber } from '../models/phone-number.model';
-import { AuthService } from './auth.service'; // Import AuthService
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',

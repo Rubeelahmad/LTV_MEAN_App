@@ -21,7 +21,7 @@ export class HeaderComponent {
   ) {}
 
   ngOnInit(): void {
-    this.isAuthenticated$ = this.authService.isAuthenticated$; // Initialize it here.
+    this.isAuthenticated$ = this.authService.isAuthenticated$;
   }
 
   logout(): void {

@@ -42,7 +42,6 @@ export class LoginComponent {
         },
         error: (error) => {
           console.error('Login failed:', error);
-          // Handle error (you might want to show an error message to the user)
         }
       });
     }

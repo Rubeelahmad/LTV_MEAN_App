@@ -47,7 +47,6 @@ export class RegisterComponent {
         },
         error: (error) => {
           console.error('Signup failed:', error);
-          // Handle error (you might want to show an error message to the user)
         }
       });
     }

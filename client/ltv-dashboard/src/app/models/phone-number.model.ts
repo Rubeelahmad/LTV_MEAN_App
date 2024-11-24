@@ -1,8 +1,8 @@
 export interface PhoneNumber {
   id: string;
-  number: string; // Change 'phone' to 'number' to match API
+  number: string;
   status: 'active' | 'inactive';
-  messages: number; // Change 'messages' to 'messageCount' for consistency
+  messages: number;
 }
 
 export interface PhoneListResponse {

@@ -19,9 +19,9 @@ import { FilterComponent } from '../filter/filter.component';
   styleUrls: ['./number-list.component.css'],
 })
 export class NumberListComponent implements OnInit {
-  filteredPhoneNumbers: PhoneNumber[] = []; // Array to store filtered phone numbers
-  pagination: any = {}; // Pagination data object
-  phoneNumbers: PhoneNumber[] = []; // Store all phone numbers fetched
+  filteredPhoneNumbers: PhoneNumber[] = [];
+  pagination: any = {}; 
+  phoneNumbers: PhoneNumber[] = []; 
 
   constructor(private phoneService: PhoneService) {}
 
@@ -32,7 +32,7 @@ export class NumberListComponent implements OnInit {
   loadPhoneNumbers(page: number, limit: number): void {
     this.phoneService.getPhoneNumbers('', page, limit).subscribe((response) => {
       this.phoneNumbers = response.data;
-      this.filteredPhoneNumbers = [...this.phoneNumbers]; // Initially, show all phone numbers
+      this.filteredPhoneNumbers = [...this.phoneNumbers];
       this.pagination = response.pagination;
     });
   }

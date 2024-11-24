@@ -1,5 +1,5 @@
 
-# MEAN Admin Dashboard - Temporary Phone Number Management
+# MEAN Admin Dashboard - Phone List Management
 
 A comprehensive admin dashboard for managing temporary phone numbers, built using the MEAN stack (MongoDB, Express.js, Angular, Node.js). This dashboard allows admins to view, filter, and manage phone numbers effectively.
 
